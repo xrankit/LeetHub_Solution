@@ -13,10 +13,6 @@ class Solution {
                sum = nums[i-2]+nums[i-1]+nums[i];
                break;
             }
-            else
-            {
-                sum=0;
-            }
         }
 
         return sum;
