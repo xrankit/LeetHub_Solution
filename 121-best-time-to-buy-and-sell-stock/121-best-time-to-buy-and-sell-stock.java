@@ -4,20 +4,17 @@ class Solution {
         {
             return 0;
         }
-        int profit = 0;
-        int min = prices[0];
+        int maxprofit = 0;
+        int minprofit = prices[0];
         for (int i = 1; i < prices.length; i++)
         {
-            if (prices[i] < min)
-            {
-                min = prices[i];
-            }
-            else 
-            {
-                profit = Math.max(profit, prices[i] - min);
-            }
+           
+            minprofit = Math.min(minprofit, prices[i]);
+         
+            maxprofit = Math.max(maxprofit, prices[i] - minprofit);
         }
-    return profit;
+    
+    return maxprofit;
         
     }
 }
